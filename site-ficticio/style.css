@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* TOPO */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    background: #111;
+}
+
+/* Submenu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    min-width: 150px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 100%;
+}
+
+nav ul li ul li a:hover {
+    background: #575757;
+}
+
+/* BANNER / CARROSSEL */
+.banner {
+    width: 100%; /* ocupa toda a largura */
+    overflow: hidden; /* esconde o que passar da borda */
+    position: relative; /* posição para controle */
+    height: 300px; /* altura fixa do carrossel */
+}
+
+.slides {
+    display: flex; /* coloca as imagens lado a lado */
+    width: 300%; /* 3 imagens = 300% da largura do banner */
+    animation: slide 9s infinite; /* animação rodando sempre */
+}
+
+.slides img {
+    width: 100%; /* cada imagem ocupa 100% do banner */
+    height: 300px; /* mesma altura do banner */
+    object-fit: cover; /* ajusta a imagem sem distorcer */
+}
+
+@keyframes slide {
+    0% { margin-left: 0; /* primeira imagem visível */}
+    33% {margin-left: -100%; } /* segunda imagem */
+    66% {margin-left: -200%;}/* terceira imagem */
+    100% { margin-left: 0;}/* volta para a primeira */
+}
+
+/* MAIN */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+section {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+aside {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* RODAPÉ */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
