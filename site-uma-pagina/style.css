@@ -5,6 +5,9 @@
     text-align: center;
 }
 
+/*
+https://www.pexels.com/search/free%20wallpaper/
+*/
 html {
   scroll-behavior: smooth;
 }
@@ -15,8 +18,13 @@ body {
    font-family: sans-serif;
 }
 
+h1{
+    color: #fff;
+    font-size: 40px;
+}
+
 .topo{    
-    background-color: #f7c9cd;
+    background-color: #004c8f;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,15 +58,80 @@ body {
     height: 100vh;
     padding: 20px;
     scroll-margin-top: 60px; /* altura do menu fixo */
+      background-size: cover;       /* cobre toda a tela, mesmo que parte seja cortada */
+  background-position: center;  /* centraliza a imagem */
+  background-repeat: no-repeat; /* evita repetição */
   }
 
 .conteudo1{
-    background-color: #f9dee0;
+    /*background-color: #f9dee0;*/
+    background-image: url("img/img1.jpg");
 }
 
 
+.conteudo1 {
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --- Keyframes --- */
+@keyframes fromLeft { from { transform: translateX(-100%); opacity:0; } to { transform: translateX(0); opacity:1; } }
+@keyframes fromRight { from { transform: translateX(100%); opacity:0; } to { transform: translateX(0); opacity:1; } }
+@keyframes fromTop { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
+@keyframes fromBottom { from { transform: translateY(100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
+
+/* --- Estilos dos spans com animação, fonte e cor --- */
+#conteudo1:target .texto1 { 
+  color: #ff6347; 
+  font-size: 60px;
+  animation: fromLeft 1s ease forwards;
+}
+
+#conteudo1:target .texto2 { 
+  color: #1e90ff; 
+  font-size: 75px;
+  animation: fromTop 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+#conteudo1:target .texto3 { 
+  color: #32cd32; 
+  font-size: 60px;
+  animation: fromRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+#conteudo1:target .texto4 { 
+  color: #ffa500; 
+  font-size: 85px;
+  animation: fromBottom 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+#conteudo1:target .texto5 {   
+  color: #ff69b4; 
+  font-size: 90px;
+  animation: fromLeft 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+#conteudo1:target .texto6 { 
+  color: #00ffff; 
+  font-size: 90px;
+  animation: fromTop 1s ease forwards;
+  animation-delay: 1s;
+}
+
 .conteudo2{
-    background-color: #ecd9d8;
+    /*background-color: #ecd9d8;*/
+    background-image: url("img/img2.jpg");
 }
 
 
@@ -93,14 +166,17 @@ body {
 
 .conteudo3{
     background-color: #b6dce3;
+    background-image: url("img/img3.jpg");
 }
 
 .conteudo4{
     background-color: #d9cbe5;
+    background-image: url("img/img4.jpg");
 }
 
 .conteudo5{
     background-color: #ffb97b;
+    background-image: url("img/img5.jpg");
 }
 
 /* keyframes para iframe */
