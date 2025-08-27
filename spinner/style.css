@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    background: url("img/spinner.gif") center no-repeat;
+    background-size: 50px 50px;
+    margin: 20px auto;
+    animation: hideSpinner 0s forwards; /* indicando qual é a animação */
+    animation-delay: 3s; /* tempo antes de sumir */
+}
+
+.container h1,
+.container p {
+    opacity: 0;
+    animation: showText 1s forwards;
+    animation-delay: 3s; /* tempo antes de aparecer */
+    padding: 50px;
+    text-align: justify;
+}
+
+.container h1{
+    text-align: center;
+}
+
+/* animação para esconder o spinner */
+@keyframes hideSpinner {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* animação para mostrar o texto */
+@keyframes showText {
+    to {
+        opacity: 1;
+    }
+}
