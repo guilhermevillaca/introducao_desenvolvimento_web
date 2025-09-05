@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Mini Sistema</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="novocliente.html">Novo Cliente</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h2>Lista de Clientes</h2>
+
+  <a href="novocliente.html" class="btn btn-success">Novo</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ana Souza</td>
+        <td>123.456.789-00</td>
+        <td>ana@email.com</td>
+        <td>(11) 98877-6655</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn btn-danger" onclick="excluir()">Excluir</button>
+        </td>
+      </tr>
+      <tr>
+        <td>João Silva</td>
+        <td>987.654.321-00</td>
+        <td>joao@email.com</td>
+        <td>(21) 97766-5544</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn btn-danger" onclick="excluir()">Excluir</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Maria Oliveira</td>
+        <td>456.789.123-00</td>
+        <td>maria@email.com</td>
+        <td>(31) 96655-4433</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn btn-danger" onclick="excluir()">Excluir</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Carlos Pereira</td>
+        <td>321.654.987-00</td>
+        <td>carlos@email.com</td>
+        <td>(41) 95544-3322</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn btn-danger" onclick="excluir()">Excluir</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Fernanda Lima</td>
+        <td>789.123.456-00</td>
+        <td>fernanda@email.com</td>
+        <td>(51) 94433-2211</td>
+        <td>
+          <button class="btn">Editar</button>
+          <button class="btn btn-danger" onclick="excluir()">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
